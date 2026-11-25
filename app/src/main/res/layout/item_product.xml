@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="14dp"
+    app:cardBackgroundColor="@color/white" app:cardCornerRadius="18dp" app:cardElevation="0dp" app:strokeColor="@color/line" app:strokeWidth="1dp">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+        <FrameLayout android:layout_width="match_parent" android:layout_height="190dp">
+            <ImageView android:id="@+id/ivImage" android:layout_width="match_parent" android:layout_height="match_parent" />
+            <TextView android:id="@+id/tvTag" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="12dp" android:background="@drawable/bg_tag" android:paddingStart="10dp" android:paddingEnd="10dp" android:paddingTop="6dp" android:paddingBottom="6dp" android:textSize="10sp" android:textStyle="bold" android:textColor="@color/evergreen" />
+            <ImageView android:id="@+id/ivHeart" android:layout_width="34dp" android:layout_height="34dp" android:layout_gravity="end" android:layout_margin="12dp" android:padding="8dp" android:background="@drawable/bg_tag" android:src="@drawable/ic_heart" />
+        </FrameLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:id="@+id/tvName" style="@style/H2" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:textSize="19sp" />
+                <TextView android:id="@+id/tvPrice" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textStyle="bold" android:textColor="@color/evergreen" />
+            </LinearLayout>
+            <TextView android:id="@+id/tvFarm" style="@style/Body" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:textSize="12sp" />
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:gravity="center_vertical">
+                <ImageView android:layout_width="14dp" android:layout_height="14dp" android:src="@drawable/ic_pin" />
+                <TextView android:id="@+id/tvTown" style="@style/Body" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:layout_marginStart="3dp" android:textSize="11sp" />
+                <TextView android:id="@+id/tvStock" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="11sp" android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

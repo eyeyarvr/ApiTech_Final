@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent">
+<LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="24dp" android:background="@drawable/bg_hero">
+        <TextView style="@style/Eyebrow" android:text="FRESH FROM BENGUET" android:textColor="#e9f1e5" />
+        <TextView android:id="@+id/tvGreeting" style="@style/H1" android:layout_marginTop="8dp" android:textColor="@android:color/white" android:textSize="32sp" />
+        <TextView android:id="@+id/tvSub" style="@style/Body" android:layout_marginTop="8dp" android:textColor="#CCFFFFFF" />
+        <LinearLayout android:layout_width="match_parent" android:layout_height="52dp" android:layout_marginTop="18dp" android:gravity="center_vertical" android:paddingStart="14dp" android:paddingEnd="6dp" android:background="@drawable/bg_search">
+            <ImageView android:layout_width="20dp" android:layout_height="20dp" android:src="@drawable/ic_search" />
+            <EditText android:id="@+id/etSearch" android:imeOptions="actionSearch" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:layout_marginStart="8dp" android:background="@null" android:hint="Search carrots, lettuce, seeds..." android:textSize="13sp" android:singleLine="true" />
+            <androidx.appcompat.widget.AppCompatButton android:id="@+id/btnSearch" style="@style/Btn" android:background="@drawable/bg_pill_sage" android:textColor="@color/evergreen" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Search" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView style="@style/Eyebrow" android:layout_marginTop="28dp" android:text="NEAR YOUR ADDRESS" />
+    <TextView style="@style/H2" android:text="Picked for you" android:textSize="26sp" />
+    <LinearLayout android:id="@+id/productList" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="14dp" android:orientation="vertical" />
+
+    <TextView android:id="@+id/tvEmpty" style="@style/Body" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center" android:padding="24dp" android:text="No crops match your search." />
+    <TextView style="@style/Eyebrow" android:layout_marginTop="14dp" android:text="SHOP BY PLACE" />
+    <TextView style="@style/H2" android:text="Harvests around you" android:textSize="26sp" />
+    <GridLayout android:id="@+id/places" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:columnCount="2" />
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="22dp" android:padding="22dp" android:gravity="center_vertical" android:background="@drawable/bg_peony">
+        <ImageView android:layout_width="56dp" android:layout_height="56dp" android:padding="14dp" android:background="@drawable/bg_circle_ice" android:src="@drawable/ic_seed" />
+        <LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:layout_marginStart="16dp" android:orientation="vertical">
+            <TextView style="@style/Eyebrow" android:text="GENTLE REMINDER" />
+            <TextView style="@style/H2" android:layout_marginTop="4dp" android:text="Order before 5 PM" android:textSize="20sp" />
+            <TextView style="@style/Body" android:layout_marginTop="4dp" android:text="Same-day orders close at 5 PM so our farmers have enough time to pack your harvest with care." android:textColor="#6f5860" android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
+</ScrollView>

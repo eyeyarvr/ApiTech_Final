@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:background="@color/white">
+<ScrollView android:layout_width="match_parent" android:layout_height="match_parent">
+<LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+    <FrameLayout android:layout_width="match_parent" android:layout_height="260dp">
+        <ImageView android:id="@+id/ivImage" android:layout_width="match_parent" android:layout_height="match_parent" />
+        <TextView android:id="@+id/tvTag" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="18dp" android:background="@drawable/bg_peony" android:paddingStart="12dp" android:paddingEnd="12dp" android:paddingTop="7dp" android:paddingBottom="7dp" android:textSize="11sp" android:textStyle="bold" android:textColor="@color/evergreen" />
+        <ImageView android:id="@+id/btnClose" android:layout_width="38dp" android:layout_height="38dp" android:layout_gravity="end" android:layout_margin="14dp" android:padding="9dp" android:background="@drawable/bg_tag" android:src="@drawable/ic_close" />
+    </FrameLayout>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="22dp">
+        <TextView style="@style/Eyebrow" android:text="FRESH PRODUCE" />
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp">
+            <TextView android:id="@+id/tvName" style="@style/H1" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" />
+            <TextView android:id="@+id/tvPrice" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textStyle="bold" android:textColor="@color/evergreen" android:textSize="18sp" />
+        </LinearLayout>
+        <TextView android:id="@+id/tvFarm" style="@style/Body" android:layout_marginTop="4dp" android:textSize="13sp" />
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:padding="14dp" android:background="@drawable/bg_input">
+            <ImageView android:layout_width="20dp" android:layout_height="20dp" android:src="@drawable/ic_pin" />
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="10dp" android:orientation="vertical">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Pickup and delivery origin" android:textStyle="bold" android:textColor="@color/ink" />
+                <TextView android:id="@+id/tvLocation" style="@style/Body" android:textSize="13sp" />
+            </LinearLayout>
+        </LinearLayout>
+        <TextView android:id="@+id/tvDescription" style="@style/Body" android:layout_marginTop="14dp" android:text="Carefully picked and packed by local growers. Natural sizes and colors may vary with each harvest. Orders for same-day delivery must be placed before 5 PM." />
+
+        <LinearLayout android:id="@+id/noteBox" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="14dp" android:padding="14dp" android:background="@drawable/bg_peony">
+            <ImageView android:layout_width="20dp" android:layout_height="20dp" android:src="@drawable/ic_bell" />
+            <LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:layout_marginStart="10dp" android:orientation="vertical">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Availability update" android:textStyle="bold" android:textColor="@color/ink" />
+                <TextView android:id="@+id/tvNote" style="@style/Body" android:textSize="13sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView style="@style/Label" android:layout_marginTop="18dp" android:text="How would you like to order?" />
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+            <LinearLayout android:id="@+id/optToday" android:visibility="gone" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:layout_marginEnd="4dp" android:orientation="vertical" android:padding="14dp" android:background="@drawable/bg_option">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Same-day" android:textStyle="bold" android:textColor="@color/ink" />
+                <TextView android:id="@+id/tvTodayStock" style="@style/Body" android:textSize="12sp" />
+            </LinearLayout>
+            <LinearLayout android:id="@+id/optPreorder" android:visibility="gone" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:layout_marginStart="4dp" android:orientation="vertical" android:padding="14dp" android:background="@drawable/bg_option">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Pre-order" android:textStyle="bold" android:textColor="@color/ink" />
+                <TextView android:id="@+id/tvPreSlots" style="@style/Body" android:textSize="12sp" />
+            </LinearLayout>
+            <LinearLayout android:id="@+id/optFull" android:visibility="gone" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:orientation="vertical" android:padding="14dp" android:background="@drawable/bg_input">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Pre-order full" android:textStyle="bold" android:textColor="@color/muted" />
+                <TextView style="@style/Body" android:text="Next batch to be announced" android:textSize="12sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/schedule" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:padding="14dp" android:orientation="vertical" android:background="@drawable/bg_input">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Choose your delivery schedule" android:textStyle="bold" android:textColor="@color/evergreen" />
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp">
+                <Spinner android:id="@+id/spMonth" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" />
+                <Spinner android:id="@+id/spDate" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" />
+                <Spinner android:id="@+id/spTime" android:layout_width="0dp" android:layout_weight="1.3" android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="22dp" android:gravity="center_vertical">
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:gravity="center_vertical" android:background="@drawable/bg_input">
+                <TextView android:id="@+id/btnMinus" android:layout_width="44dp" android:layout_height="46dp" android:gravity="center" android:text="−" android:textSize="20sp" android:textColor="@color/evergreen" />
+                <TextView android:id="@+id/tvQty" android:layout_width="32dp" android:layout_height="wrap_content" android:gravity="center" android:textStyle="bold" android:textColor="@color/ink" />
+                <TextView android:id="@+id/btnPlus" android:layout_width="44dp" android:layout_height="46dp" android:gravity="center" android:text="+" android:textSize="20sp" android:textColor="@color/evergreen" />
+            </LinearLayout>
+            <androidx.appcompat.widget.AppCompatButton android:id="@+id/btnAdd" style="@style/Btn.Primary" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:layout_marginStart="12dp" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
+</ScrollView>
+
+<!-- sold-out notice (notice-pop) -->
+<FrameLayout android:id="@+id/noticeOverlay" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:background="#99052012" android:clickable="true">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_gravity="center" android:layout_margin="28dp" android:padding="24dp" android:orientation="vertical" android:gravity="center_horizontal" android:background="@drawable/bg_card">
+        <ImageView android:layout_width="56dp" android:layout_height="56dp" android:padding="14dp" android:background="@drawable/bg_circle_peony" android:src="@drawable/ic_seed" />
+        <TextView style="@style/H2" android:layout_marginTop="14dp" android:text="Today’s harvest is sold out" android:gravity="center" />
+        <TextView android:id="@+id/tvNoticeBody" style="@style/Body" android:layout_marginTop="8dp" android:gravity="center" />
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="18dp">
+            <androidx.appcompat.widget.AppCompatButton android:id="@+id/btnNoticeCancel" style="@style/Btn.Soft" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:layout_marginEnd="5dp" android:text="Cancel" />
+            <androidx.appcompat.widget.AppCompatButton android:id="@+id/btnNoticePre" style="@style/Btn.Primary" android:layout_width="0dp" android:layout_weight="1.4" android:layout_height="wrap_content" android:layout_marginStart="5dp" android:text="Pre-order instead" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>
+</FrameLayout>

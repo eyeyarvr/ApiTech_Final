@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent">
+<LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="18dp" android:gravity="center_vertical" android:background="@drawable/bg_card">
+        <TextView android:id="@+id/tvAvatar" android:layout_width="64dp" android:layout_height="64dp" android:background="@drawable/bg_circle_peony" android:gravity="center" android:textSize="20sp" android:textStyle="bold" android:textColor="@color/evergreen" />
+        <LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:layout_marginStart="14dp" android:orientation="vertical">
+            <TextView android:id="@+id/tvRole" style="@style/Eyebrow" />
+            <TextView android:id="@+id/tvName" style="@style/H2" android:layout_marginTop="2dp" />
+            <TextView android:id="@+id/tvLocation" style="@style/Body" android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+    <androidx.appcompat.widget.AppCompatButton android:id="@+id/btnEditProfile" style="@style/Btn.Soft" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="Edit profile" />
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:orientation="vertical" android:padding="18dp" android:background="@drawable/bg_card">
+        <TextView style="@style/Eyebrow" android:text="PERSONAL INFORMATION" />
+        <TextView style="@style/H2" android:layout_marginTop="4dp" android:text="Your details" />
+        <TextView style="@style/Label" android:text="Full name" />
+        <TextView android:id="@+id/tvFullName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textStyle="bold" android:textColor="@color/ink" />
+        <TextView style="@style/Label" android:text="Username" />
+        <TextView android:id="@+id/tvUsername" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textStyle="bold" android:textColor="@color/ink" />
+        <TextView style="@style/Label" android:text="Email address" />
+        <TextView android:id="@+id/tvEmail" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textStyle="bold" android:textColor="@color/ink" />
+        <TextView style="@style/Label" android:text="Contact number" />
+        <TextView android:id="@+id/tvPhone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textStyle="bold" android:textColor="@color/ink" />
+        <TextView style="@style/Label" android:text="Home address" />
+        <TextView android:id="@+id/tvAddress" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textStyle="bold" android:textColor="@color/ink" />
+    </LinearLayout>
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:orientation="vertical" android:padding="18dp" android:background="@drawable/bg_card">
+        <TextView style="@style/Eyebrow" android:text="YOUR ANI ACCOUNT" />
+        <TextView android:id="@+id/tvMenuHeading" style="@style/H2" android:layout_marginTop="4dp" />
+        <LinearLayout android:id="@+id/menuList" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:orientation="vertical" />
+    </LinearLayout>
+
+    <!-- farmer business panel -->
+    <LinearLayout android:id="@+id/businessPanel" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:orientation="vertical" android:padding="18dp" android:background="@drawable/bg_card">
+        <ImageView android:id="@+id/ivCover" android:layout_width="match_parent" android:layout_height="120dp" />
+        <TextView style="@style/Eyebrow" android:layout_marginTop="14dp" android:text="MY FARM BUSINESS" />
+        <TextView android:id="@+id/tvFarmName" style="@style/H2" android:layout_marginTop="4dp" />
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp">
+            <TextView android:id="@+id/tvStatProducts" style="@style/Body" android:layout_width="0dp" android:layout_weight="1" android:textColor="@color/ink" />
+            <TextView android:id="@+id/tvStatRating" style="@style/Body" android:layout_width="0dp" android:layout_weight="1" android:textColor="@color/ink" />
+            <TextView android:id="@+id/tvStatOrders" style="@style/Body" android:layout_width="0dp" android:layout_weight="1" android:textColor="@color/ink" />
+        </LinearLayout>
+        <androidx.appcompat.widget.AppCompatButton android:id="@+id/btnManage" style="@style/Btn.Primary" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="14dp" android:text="Manage my business" />
+
+        <LinearLayout android:id="@+id/managerBox" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+            <TextView style="@style/Label" android:layout_marginTop="16dp" android:text="Farm name" />
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical">
+                <EditText android:id="@+id/etFarmName" style="@style/Input" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" />
+                <androidx.appcompat.widget.AppCompatButton android:id="@+id/btnSaveFarm" style="@style/Btn.Soft" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="8dp" android:text="Save" />
+            </LinearLayout>
+
+            <TextView style="@style/Eyebrow" android:layout_marginTop="18dp" android:text="CROP LISTINGS" />
+            <TextView style="@style/H2" android:layout_marginTop="4dp" android:text="Sell and update crops" android:textSize="19sp" />
+            <androidx.appcompat.widget.AppCompatButton android:id="@+id/btnNewListing" style="@style/Btn.Soft" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="＋  Post a crop for sale" />
+            <LinearLayout android:id="@+id/newListingForm" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+                <TextView style="@style/Label" android:text="Crop name" />
+                <EditText android:id="@+id/etCropName" style="@style/Input" android:layout_width="match_parent" android:layout_height="wrap_content" />
+                <TextView style="@style/Label" android:text="Price (₱) and unit" />
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <EditText android:id="@+id/etCropPrice" style="@style/Input" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:inputType="number" />
+                    <Spinner android:id="@+id/spCropUnit" android:layout_width="0dp" android:layout_weight="1" android:layout_height="48dp" android:layout_marginStart="8dp" android:background="@drawable/bg_input" />
+                </LinearLayout>
+                <TextView style="@style/Label" android:text="Available stock now" />
+                <EditText android:id="@+id/etCropStock" style="@style/Input" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="number" />
+                <TextView style="@style/Label" android:text="Pre-order slots (next harvest)" />
+                <EditText android:id="@+id/etCropPreorder" style="@style/Input" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="number" android:text="0" />
+                <TextView style="@style/Label" android:text="Harvest location" />
+                <Spinner android:id="@+id/spCropTown" android:layout_width="match_parent" android:layout_height="48dp" android:background="@drawable/bg_input" />
+                <TextView style="@style/Label" android:text="Crop description" />
+                <EditText android:id="@+id/etCropDesc" style="@style/Input" android:layout_width="match_parent" android:layout_height="90dp" android:gravity="top" android:inputType="textMultiLine" />
+                <CheckBox android:id="@+id/cbSameDay" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true" android:text="Offer same-day delivery" android:buttonTint="@color/evergreen" />
+                <androidx.appcompat.widget.AppCompatButton android:id="@+id/btnPickPhoto" style="@style/Btn.Soft" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:text="Choose a photo" />
+                <androidx.appcompat.widget.AppCompatButton android:id="@+id/btnPublish" style="@style/Btn.Primary" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="Publish crop listing" />
+            </LinearLayout>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="18dp" android:text="Your crop posts" android:textStyle="bold" android:textColor="@color/ink" />
+            <TextView style="@style/Body" android:text="Posts not updated in 30 days are flagged so you can refresh them." android:textSize="12sp" />
+            <LinearLayout android:id="@+id/listingList" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:orientation="vertical" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton android:id="@+id/btnSwitch" style="@style/Btn.Link" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="14dp" />
+    <androidx.appcompat.widget.AppCompatButton android:id="@+id/btnLogout" style="@style/Btn.Link" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Log out" />
+</LinearLayout>
+</ScrollView>
